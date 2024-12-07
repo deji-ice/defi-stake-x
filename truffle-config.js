@@ -11,7 +11,7 @@ module.exports = {
   contracts_build_directory: "./truffle-abis",  // Where to store the compiled contracts
   compilers: {
     solc: {
-      version: "0.8.21",      // Set the Solidity version you're using
+      version: "0.5.1",      // Set the Solidity version you're using
     }
   
   },
