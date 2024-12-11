@@ -10,9 +10,9 @@ contract DecentralBank {
     Tether public tether;
     RewardToken public rewardToken;
 
-    constructor(RewardToken _rwd, Tether _tether ) public {
+    constructor(RewardToken _rwd, Tether _tether) public {
         owner = msg.sender;
-        rwd = _rwd; // Reward Token
-        tether = _tether; // Tether Token 
+        rewardToken = _rwd; // Reward Token
+        tether = _tether; // Tether Token
     }
 }
