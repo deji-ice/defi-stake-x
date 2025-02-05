@@ -45,5 +45,10 @@ contract("DecentralBank", ([owner, customer]) => {
       const name = await dbank.name();
       assert.equal(name, "Decentral Bank");
     });
+    it("contract has tokens", async () => {
+      // Check the balance of the Decentral Bank contract (1 million tokens) - 1 million * 10^18 = 1000000000000000000000
+      const balance = await rwd.balanceOf(dbank.address);
+      assert.equal(balance, tokens("1000000"));
+    });
   });
 });
