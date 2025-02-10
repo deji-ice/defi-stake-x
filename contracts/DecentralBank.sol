@@ -25,6 +25,7 @@ contract DecentralBank {
         tether = _tether; // Tether Token
     }
 
+    // 1. Stakes Tokens (Deposit)
     function depositTokens(uint _amount) public{
         // require amount greater than 0
         require(_amount > 0, "amount cannot be 0");
@@ -41,6 +42,14 @@ contract DecentralBank {
         isStaking[msg.sender] = true;
         hasStaked[msg.sender] = true;
 
+    }
+
+    //  2. Unstaking Tokens (Withdraw)
+
+    function withdraw(uint _amount) public{
+        require(_amount > 0, "amount cannot be 0");
+        // get the staking balance
+        uint balance = stakingBalance[msg.sender];
     }
 }
  
